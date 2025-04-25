@@ -46,8 +46,7 @@
                 关注
               </button>
               <div class="msg-btn" v-app-download>
-                <img width="12px" style="  filter: invert(1);
-" src="@/assets/imgs/detail/关注.png">
+                <img width="12px" src=" @/assets/imgs/chat.png">
               </div>
             </div>
           </div>
@@ -114,6 +113,7 @@ onMounted(() => {
 .tabs {
   background: #fff;
   border-bottom: 1px solid #eee;
+  border-radius: 8px 8px 0 0;
 }
 
 .tab-row {
@@ -124,6 +124,7 @@ onMounted(() => {
   color: #898989;
   border-radius: 8px 8px 0 0;
   gap: 30px;
+  justify-content: space-around;
 }
 
 .tab-row.sub {
@@ -280,7 +281,7 @@ onMounted(() => {
 }
 
 .user-info {
-  margin-top: 100px;
+  margin-top: 162px;
   /* height: 268px; */
   margin: 100px 14px 20px 14px;
 }
@@ -426,6 +427,10 @@ onMounted(() => {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+  /* margin-right: 10px; */
 }
 
 .tb-btn {
@@ -436,6 +441,7 @@ onMounted(() => {
   padding: 0px 20px;
   height: 30px;
   display: flex;
+  margin-right: 30px;
   align-items: center;
 }
 

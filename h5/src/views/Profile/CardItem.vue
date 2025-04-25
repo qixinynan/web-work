@@ -12,8 +12,9 @@
       <img class="author-avatar" :src="item.userPic || fallbackAvatar" />
       <div class="author-name">{{ props.nickName }}</div>
       <div>
-        <div class="like"><img width="12px" src="@/assets/imgs/heart.png"> {{ item.likeNum }}</div>
-        <span>{{ item }}</span>
+        <div class="like"><img width="12px" style="  filter: invert(1);" src="@/assets/imgs/star.png"> {{ item.likeNum
+          }}</div>
+        <!-- <span>{{ item }}</span> -->
       </div>
     </div>
   </div>
@@ -58,6 +59,19 @@ if (!(props.item.picUrl1 || props.item.pictureList?.[0])) {
     else templateStyle.value = "template-3"
   })
   text.value = props.item.content
+}
+
+function convertToChineseUnit(number) {
+  const units = ["京", "兆", "亿", "万", ""]
+  const bases = [1e16, 1e12, 1e8, 1e4, 1]
+
+  for (let i = 0; i < units.length; i++) {
+    if (Math.abs(number) >= bases[i]) {
+      return formatNumber(number / bases[i]) + units[i]
+    }
+  }
+
+  return number.toString()
 }
 </script>
 
