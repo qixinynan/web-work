@@ -1,0 +1,35 @@
+import axios from './request'
+
+// export async function downloadAndroid() {
+//   const res = await axios.get("https://creditapp.singalariti.com/common/getAndroidPackage")
+//   return res.data
+// }
+
+// export async function saveContact(data) {
+//   const res = await axios.post(
+//     "https://creditadmin.singalariti.com/prod-api/portal/save/contactInfo",
+//     data
+//   )
+//   return res.data
+// }
+
+// export async function subscribe(data) {
+//   const res = await axios.post(
+//     "https://creditadmin.singalariti.com/prod-api/portal/save/subscribe",
+//     data,
+//     {
+
+//     }
+//   )
+//   return res.data
+// }
+
+export async function getDetail(pid) {
+  const res = await axios.get(`http://testapp.singalariti.com/social/publish/share/card?publishPid=${pid}`)
+  return res.data;
+}
+
+export async function getHome(pid) {
+  const res = await axios.get(`http://testapp.singalariti.com/social/publish/share/cardDetail?userPid=${pid}`)
+  return res.data;
+}
