@@ -11,10 +11,9 @@
     <div class="author-row">
       <img class="author-avatar" :src="item.userPic || fallbackAvatar" />
       <div class="author-name">{{ props.nickName }}</div>
-      <div>
-        <div class="like"><img width="12px" style="  filter: invert(1);" src="@/assets/imgs/star.png"> {{ item.likeNum
-          }}</div>
-        <!-- <span>{{ item }}</span> -->
+      <div style="display: flex;gap: 4px;">
+        <div class="like"><img width="12px" style="  filter: invert(1);" src="@/assets/imgs/star.png"> </div>
+        <span>{{ convertToChineseUnit(item.collectionNum) }}</span>
       </div>
     </div>
   </div>
